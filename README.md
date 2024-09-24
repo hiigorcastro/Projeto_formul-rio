@@ -29,9 +29,9 @@ O formulário possui as seguintes funcionalidades:
 ## Responsáveis pelo projeto
 
 - **Higor Castro**
-- **Julia Rozendo**
+- **Julia Rosendo**
 - **Paulo Junior**
-- **André Elias**
+- **André Borges**
 
 ## Contato
 
