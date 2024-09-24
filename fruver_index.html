@@ -1,0 +1,103 @@
+<!DOCTYPE html>  
+<html lang="pt-BR">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Fruver - Cadastro de Clientes</title>  
+    <link rel="stylesheet" href="assets/css/fruver_style.css">  
+</head>  
+<body>  
+    <div class="container">  
+        <h1>Fruver <img src="assets/img/ilustracao-em-vetor-icone-abacate-colorido-isolado-no-fundo-branco.png" alt="Logo Fruver" class="logo"></h1>  
+        <form id="cadastroForm" action="processar_cadastro.php" method="POST">
+            <label for="nomeEstabelecimento">Nome do Estabelecimento: <span class="required">*</span></label>  
+            <input type="text" id="nomeEstabelecimento" name="nomeEstabelecimento" required>  
+
+            <label for="documentoComercial">Documento Comercial: <span class="required">*</span></label>  
+            <select id="documentoComercial" name="documentoComercial" required>  
+                <option value="">Selecione</option>  
+                <option value="cpf">CPF</option>  
+                <option value="cnpj">CNPJ</option>  
+            </select>  
+            <input type="text" id="documento" name="documento" required placeholder="Digite o CPF ou CNPJ">  
+
+            <label for="telefoneContato">Telefone de Contato:</label>  
+            <input type="tel" id="telefoneContato" name="telefoneContato" placeholder="(xx) xxxxx-xxxx" required oninput="formatarTelefone(this)">  
+
+            <label for="telefoneWhatsApp">Telefone WhatsApp: <span class="required">*</span></label>  
+            <input type="tel" id="telefoneWhatsApp" name="telefoneWhatsApp" placeholder="(xx) xxxxx-xxxx" required oninput="formatarTelefone(this)">  
+
+            <label for="emailcontato">E-mail: <span class="required">*</span></label>  
+            <input type="email" id="emailcontato" name="emailcontato" placeholder="exemplo@exemplo.com.br" required>  
+
+            <label for="nomeResponsavel">Nome do Responsável (Comprador)</label>  
+            <input type="text" id="nomeResponsavel" name="nomeResponsavel">  
+
+            <label for="telefoneResponsavel">Telefone para Contato do Responsável:</label>  
+            <input type="tel" id="telefoneResponsavel" name="telefoneResponsavel" placeholder="(xx) xxxxx-xxxx" oninput="formatarTelefone(this)">  
+
+
+            <h2>Endereço de Entrega</h2>  
+            <label for="cep">CEP: <span class="required">*</span></label>  
+            <input type="text" id="cep" name="cep" placeholder="xxxxx-xxx" required>  
+            <input type="text" id="endereco" name="endereco" placeholder="Endereço" readonly>  
+            <input type="text" id="bairro" name="bairro" placeholder="Bairro" readonly>  
+            <input type="text" id="cidade" name="cidade" placeholder="Cidade" readonly>  
+            <input type="text" id="estado" name="estado" placeholder="Estado" readonly>  
+            <input type="text" id="numero" name="numero" placeholder="Número">  
+            <input type="text" id="complemento" name="complemento" placeholder="Complemento">  
+            <input type="text" id="referencia" name="referencia" placeholder="Ponto de Referência">  
+
+            <label for="horarioInicial">Horário Inicial para Receber Mercadorias <span class="required">*</span></label>  
+            <select id="horarioInicial" name="horarioInicial" required>  
+                <option value="06:00">06:00</option>  
+                <option value="07:00">07:00</option>  
+                <option value="08:00">08:00</option>  
+                <option value="09:00">09:00</option>  
+                <option value="10:00">10:00</option>  
+                <option value="11:00">11:00</option>  
+                <option value="12:00">12:00</option>  
+                <option value="13:00">13:00</option>  
+                <option value="14:00">14:00</option>  
+                <option value="15:00">15:00</option>  
+                <option value="16:00">16:00</option>  
+                <option value="17:00">17:00</option>  
+                <option value="18:00">18:00</option>  
+            </select>  
+
+            <label for="horarioFinal">Horário Final para Receber Mercadorias<span class="required">*</span></label>  
+            <select id="horarioFinal" name="horarioFinal" required>  
+                <option value="06:00">06:00</option>  
+                <option value="07:00">07:00</option>  
+                <option value="08:00">08:00</option>  
+                <option value="09:00">09:00</option>  
+                <option value="10:00">10:00</option>  
+                <option value="11:00">11:00</option>  
+                <option value="12:00">12:00</option>  
+                <option value="13:00">13:00</option>  
+                <option value="14:00">14:00</option>  
+                <option value="15:00">15:00</option>  
+                <option value="16:00">16:00</option>  
+                <option value="17:00">17:00</option>  
+                <option value="18:00">18:00</option>  
+            </select>  
+
+            <div class="checkbox-container">  
+                <div class="checkbox-item">  
+                    <input type="checkbox" id="promocoes" name="promocoes">  
+                    <label for="promocoes">Aceito receber promoções</label>  
+                </div>  
+                <div class="checkbox-item">  
+                    <input type="checkbox" id="termos" name="termos" required>  
+                    <label for="termos">Li e Concordo com os <a href="assets/resources/Termos e Condições - Fruver.pdf" target="_blank" rel="noopener noreferrer">Termos e Condições</a>  
+                        <span class="required">*</span>  
+                    </label>  
+                </div>  
+            </div>  
+
+            <button type="submit">Finalizar Cadastro</button>  
+        </form>  
+    </div>  
+    <script src="assets/js/fruver_script.js"></script>  
+</body>  
+</html>

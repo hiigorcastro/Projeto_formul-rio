@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('../img/top-view-green-skinned-avocados-wooden-kitchen-board-with-limes-with-green-apples-parsley-isolated-green-surface-with-copy-space.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(27, 26, 26, 0.616);
+    box-shadow: 0 0 10px rgba(15, 11, 6, 0.493);
+    position: relative;
+    right: 0;
+    margin-left: auto;
+    margin-right: 50px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px; 
+    color: #219703f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 img.logo {
+    margin-left: 10px;
+    width: 70px;
+    height: 70px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: left;
+    color: #fafdf9;  
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}  
+
+
+label {
+    margin-top: 10px;
+    color: #f8f3f3;
+}
+
+input, select, button {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #f8f6f6;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.required {
+    color: red;
+}
+
+.checkbox-container {  
+    display: flex;  
+    flex-direction: column;
+    gap: 10px;
+}  
+
+.checkbox-item {  
+    display: flex;  
+    align-items: center;
+}  
+
+input[type="checkbox"] {  
+    margin-right: 8px;
+}  
